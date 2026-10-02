@@ -1,0 +1,68 @@
+{
+  "total": 15,
+  "offset": 0,
+  "limit": 15,
+  "data": [
+    {
+      "Key": "ContactUs.NameLabel",
+      "Value": "Full Name"
+    },
+    {
+      "Key": "ContactUs.EmailLabel",
+      "Value": "Email Address"
+    },
+    {
+      "Key": "ContactUs.MessageLabel",
+      "Value": "Message"
+    },
+    {
+      "Key": "ContactUs.CategoryLabel",
+      "Value": "Category"
+    },
+    {
+      "Key": "ContactUs.CategoryOptionBuyer",
+      "Value": "Buyer"
+    },
+    {
+      "Key": "ContactUs.CategoryOptionSeller",
+      "Value": "Seller"
+    },
+    {
+      "Key": "ContactUs.CategoryOptionTechPartner",
+      "Value": "Tech Partner"
+    },
+    {
+      "Key": "ContactUs.CategoryOptionOmsSterling",
+      "Value": "OMS Sterling"
+    },
+    {
+      "Key": "ContactUs.OrderNumberLabel",
+      "Value": "Order Number (optional)"
+    },
+    {
+      "Key": "ContactUs.SkuLabel",
+      "Value": "Product SKU (optional)"
+    },
+    {
+      "Key": "ContactUs.SubmitButton",
+      "Value": "Submit Request"
+    },
+    {
+      "Key": "ContactUs.SubmittingButton",
+      "Value": "Submitting..."
+    },
+    {
+      "Key": "ContactUs.SuccessMessage",
+      "Value": "Your request has been submitted. Ticket reference: {ticketNumber}"
+    },
+    {
+      "Key": "ContactUs.ErrorMessage",
+      "Value": "We couldn't submit your request. Please try again later."
+    },
+    {
+      "Key": "Global.ContactUsDescription",
+      "Value": "Tell us how we can help and we will route your request to the right team."
+    }
+  ],
+  ":type": "sheet"
+}

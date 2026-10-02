@@ -1,0 +1,177 @@
+.contact-us {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 0 var(--spacing-small);
+}
+
+.contact-us__form {
+  display: grid;
+  gap: var(--spacing-large);
+  padding: clamp(var(--spacing-large), 4vw, calc(var(--spacing-large) * 1.5));
+  border: 1px solid color-mix(in srgb, var(--color-neutral-300) 75%, transparent);
+  border-radius: 1.25rem;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--background-color) 95%, var(--color-brand-100)) 0%, var(--background-color) 100%);
+  box-shadow: 0 18px 50px color-mix(in srgb, var(--color-neutral-900) 12%, transparent);
+}
+
+.contact-us__title {
+  margin: 0;
+  font-size: clamp(1.75rem, 2vw, 2.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.contact-us__description {
+  margin: calc(var(--spacing-xxsmall) * -1) 0 0;
+  color: var(--color-neutral-700);
+  max-width: 40rem;
+  line-height: 1.6;
+}
+
+.contact-us__field {
+  display: grid;
+  gap: var(--spacing-xxsmall);
+}
+
+.contact-us__label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-neutral-900);
+}
+
+.contact-us__control {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.875rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--color-neutral-400) 85%, transparent);
+  border-radius: 0.875rem;
+  background: var(--background-color);
+  font: inherit;
+  color: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.contact-us__field textarea.contact-us__control {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.contact-us__control:hover {
+  border-color: var(--color-neutral-500);
+}
+
+.contact-us__control:focus {
+  outline: 0;
+  border-color: var(--color-brand-500);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-brand-500) 18%, transparent);
+}
+
+.contact-us__control[aria-invalid='true'] {
+  border-color: var(--color-red-600);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-red-600) 14%, transparent);
+}
+
+.contact-us__error {
+  color: var(--color-red-600);
+  font-size: var(--body-size-small);
+  line-height: 1.4;
+}
+
+.contact-us__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-small);
+  padding-top: var(--spacing-xxsmall);
+}
+
+.contact-us__submit {
+  appearance: none;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.95rem 1.5rem;
+  background: var(--color-neutral-900);
+  color: var(--color-white);
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow: 0 12px 24px color-mix(in srgb, var(--color-neutral-900) 28%, transparent);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease, background-color 0.15s ease;
+}
+
+.contact-us__submit:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: var(--color-neutral-800);
+  box-shadow: 0 14px 28px color-mix(in srgb, var(--color-neutral-900) 34%, transparent);
+}
+
+.contact-us__submit:focus-visible {
+  outline: 3px solid var(--color-brand-500);
+  outline-offset: 4px;
+  box-shadow: 0 12px 24px color-mix(in srgb, var(--color-neutral-900) 28%, transparent);
+}
+
+.contact-us__submit:disabled {
+  opacity: 0.72;
+  cursor: wait;
+  transform: none;
+  box-shadow: none;
+}
+
+.contact-us__submit-help {
+  margin: 0;
+  color: var(--color-neutral-700);
+  font-size: var(--body-size-small);
+  line-height: 1.4;
+  max-width: 24rem;
+}
+
+.contact-us__state {
+  padding: var(--spacing-small) var(--spacing-medium);
+  border-radius: 0.875rem;
+  background: color-mix(in srgb, var(--color-neutral-100) 80%, var(--background-color));
+  border: 1px solid color-mix(in srgb, var(--color-neutral-300) 80%, transparent);
+}
+
+.contact-us__state:focus {
+  outline: 3px solid var(--color-brand-500);
+  outline-offset: 4px;
+}
+
+.contact-us__status {
+  margin: 0;
+  font-weight: 600;
+}
+
+.contact-us__status--success {
+  color: var(--color-green-700);
+}
+
+.contact-us__status--error {
+  color: var(--color-red-700);
+}
+
+@media (width >= 768px) {
+  .contact-us__form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--spacing-large);
+  }
+
+  .contact-us__title,
+  .contact-us__description,
+  .contact-us__actions,
+  .contact-us__state,
+  .contact-us__field:nth-of-type(3),
+  .contact-us__field:nth-of-type(4),
+  .contact-us__field:nth-of-type(6) {
+    grid-column: 1 / -1;
+  }
+
+  .contact-us__field:nth-of-type(1),
+  .contact-us__field:nth-of-type(2),
+  .contact-us__field:nth-of-type(5) {
+    align-self: start;
+  }
+}
