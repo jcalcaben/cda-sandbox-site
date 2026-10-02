@@ -1,0 +1,23 @@
+{
+  "definitions": [
+    {
+      "title": "Contact Us",
+      "id": "contact-us",
+      "model": "contact-us",
+      "filter": "contact-us",
+      "plugins": {
+        "da": {
+          "rows": 1,
+          "columns": 1
+        }
+      }
+    }
+  ],
+  "models": [],
+  "filters": [
+    {
+      "id": "contact-us",
+      "components": []
+    }
+  ]
+}
