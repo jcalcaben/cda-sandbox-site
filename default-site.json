@@ -27,6 +27,7 @@
     "default": {
       "commerce-core-endpoint": "{ENDPOINT}",
       "commerce-endpoint": "{CS_ENDPOINT}",
+      "support-ticket-endpoint": "",
       "headers": {
         "all": {
           "Store": "default"
