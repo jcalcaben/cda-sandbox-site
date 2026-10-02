@@ -1,0 +1,21 @@
+{
+  "definitions": [
+    {
+      "title": "Contact Us",
+      "id": "contact-us",
+      "model": "contact-us",
+      "plugins": {
+        "da": {
+          "type": "key-value-block"
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "contact-us",
+      "fields": []
+    }
+  ],
+  "filters": []
+}

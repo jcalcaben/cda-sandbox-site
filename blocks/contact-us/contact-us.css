@@ -1,0 +1,98 @@
+.contact-us {
+  max-width: 780px;
+  margin: var(--spacing-big) auto;
+}
+
+.contact-us-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-small);
+}
+
+.contact-us-grid {
+  display: grid;
+  gap: var(--spacing-small);
+}
+
+.contact-us-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxsmall);
+  min-width: 0;
+}
+
+.contact-us-field label {
+  font: var(--type-body-2-emphasized-font);
+  color: var(--color-neutral-900);
+}
+
+.contact-us-field input,
+.contact-us-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-neutral-600);
+  border-radius: var(--shape-border-radius-1);
+  background: var(--color-neutral-50);
+  color: var(--color-neutral-900);
+}
+
+.contact-us-field textarea {
+  min-height: 144px;
+  resize: vertical;
+}
+
+.contact-us-field input:focus-visible,
+.contact-us-field textarea:focus-visible,
+.contact-us-submit:focus-visible {
+  outline: 2px solid var(--color-brand-600);
+  outline-offset: 2px;
+}
+
+.contact-us-field [aria-invalid="true"] {
+  border-color: var(--color-alert-800);
+}
+
+.contact-us-field-error {
+  color: var(--color-alert-800);
+  font: var(--type-body-2-default-font);
+}
+
+.contact-us-field-error:empty,
+.contact-us-status:empty {
+  display: none;
+}
+
+.contact-us-status {
+  margin: 0;
+  padding: var(--spacing-small);
+  border-radius: var(--shape-border-radius-1);
+}
+
+.contact-us-status--error {
+  background: var(--color-alert-200);
+  color: var(--color-neutral-900);
+}
+
+.contact-us-status--success {
+  background: var(--color-positive-200);
+  color: var(--color-neutral-900);
+}
+
+.contact-us-submit {
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.contact-us .contact-us-submit:disabled {
+  background: var(--color-neutral-300);
+  color: var(--color-neutral-900);
+  border-color: var(--color-neutral-300);
+  cursor: not-allowed;
+}
+
+@media (min-width: 600px) {
+  .contact-us-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

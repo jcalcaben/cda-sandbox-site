@@ -38,9 +38,11 @@
           "...": "../blocks/columns/_*.json#/definitions"
         },
         {
+          "...": "../blocks/contact-us/_*.json#/definitions"
+        },
+        {
           "...": "../blocks/enrichment/_*.json#/definitions"
         },
-
         {
           "...": "../blocks/fragment/_*.json#/definitions"
         },
