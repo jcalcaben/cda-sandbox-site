@@ -30,7 +30,7 @@ const DEFAULTS = {
 
 let instanceCount = 0;
 
-function makeField(form, field, labelText, instance, tag = 'input') {
+function makeField(form, field, labelText, instance, tag = 'input', placeholderText = '') {
   const wrapper = document.createElement('div');
   wrapper.className = 'contact-us__field';
   const label = document.createElement('label');
@@ -40,6 +40,9 @@ function makeField(form, field, labelText, instance, tag = 'input') {
   control.id = label.htmlFor;
   control.name = field;
   if (tag === 'input') control.type = field === 'email' ? 'email' : 'text';
+  if (placeholderText && field !== 'attachments' && tag !== 'select') {
+    control.placeholder = placeholderText;
+  }
   if (field === 'email') control.autocomplete = 'email';
   if (field === 'name') control.autocomplete = 'name';
   if (['name', 'email', 'subject', 'description'].includes(field)) control.required = true;
@@ -93,7 +96,9 @@ export default async function decorate(block) {
   [['name', 'input'], ['email', 'input'], ['subject', 'input'], ['description', 'textarea'],
     ['category', 'select'], ['orderNumber', 'input'], ['sku', 'input'], ['attachments', 'input']]
     .forEach(([field, tag]) => {
-      fields[field] = makeField(form, field, labels[`${field}Label`], instance, tag);
+      fields[field] = makeField(
+        form, field, labels[`${field}Label`], instance, tag, labels[`${field}Placeholder`],
+      );
     });
 
   const category = fields.category.control;
