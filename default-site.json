@@ -27,6 +27,7 @@
     "default": {
       "commerce-core-endpoint": "{ENDPOINT}",
       "commerce-endpoint": "{CS_ENDPOINT}",
+      "contact-us-endpoint": "https://3117813-snowdemo-stage.adobeioruntime.net/api/v1/web/servicenow-ticket-integration-1.0.0/submit-ticket",
       "headers": {
         "all": {
           "Store": "default"
